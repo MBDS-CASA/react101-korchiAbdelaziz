@@ -1,6 +1,8 @@
 import React from 'react'
 
 const Footer = () => {
+    const annee = new Date().getFullYear()
+
     return (
         <footer style={{
             position: 'fixed',
@@ -9,7 +11,7 @@ const Footer = () => {
             textAlign: 'center',
             padding: '10px 0'
         }}>
-            Tous droits réservés - Korchi Abdelaziz
+            © {annee} - Korchi.Abdellaziz, Tous droits réservés.
         </footer>
     )
 }
