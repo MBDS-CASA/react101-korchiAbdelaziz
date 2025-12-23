@@ -9,24 +9,34 @@ import Paper from '@mui/material/Paper'
 import notesData from '../assets/data/notes.json'
 
 const Matieres = () => {
+    // Extraire les cours uniques avec le "professeur" fictif
     const classes = Array.from(new Map(
-        notesData.map(note => [note.course, { name: note.course, teacher: note.student.firstname }])
+        notesData.map(note => [
+            note.course,
+            {
+                name: note.course,
+                teacherName: note.student.firstname + ' ' + note.student.lastname,
+                teacherId: note.student.id
+            }
+        ])
     ).values())
 
     return (
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} style={{ marginTop: 20 }}>
             <Table>
                 <TableHead>
                     <TableRow>
-                        
-                        <TableCell>Matières</TableCell>
+                        <TableCell>Matière</TableCell>
+                        <TableCell>ID Prof</TableCell>
+                        <TableCell>Nom Prof</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {classes.map((classe, index) => (
                         <TableRow key={index}>
-                            
                             <TableCell>{classe.name}</TableCell>
+                            <TableCell>{classe.teacherId}</TableCell>
+                            <TableCell>{classe.teacherName}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>

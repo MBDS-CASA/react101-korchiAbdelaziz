@@ -4,12 +4,16 @@ import Notes from './Notes'
 import Etudiants from './Etudiants'
 import Matieres from './Matieres'
 import APropos from './APropos'
+import Classe from './Classe'
+import Professeurs from './Professeurs'
 
 const menuItems = [
     { name: "Notes", component: <Notes /> },
     { name: "Etudiants", component: <Etudiants /> },
     { name: "Matières", component: <Matieres /> },
-    { name: "A propos", component: <APropos /> }
+    { name: "Classes", component: <Classe /> },
+    { name: "Professeurs", component: <Professeurs /> },
+    { name: "A propos", component: <APropos /> },
 ]
 
 const Menu = () => {

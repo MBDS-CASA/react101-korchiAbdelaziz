@@ -8,27 +8,25 @@ import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 import notesData from '../assets/data/notes.json'
 
-const Notes = () => {
+const Classe = () => {
+    const classes = Array.from(new Map(
+        notesData.map(note => [note.course, { name: note.course, teacher: note.student.firstname }])
+    ).values())
+
     return (
         <TableContainer component={Paper}>
             <Table>
                 <TableHead>
                     <TableRow>
-                        <TableCell>ID</TableCell>
-                        <TableCell>Étudiant</TableCell>
-                        <TableCell>Cours</TableCell>
-                        <TableCell>Date</TableCell>
-                        <TableCell>Note</TableCell>
+                        <TableCell>Enseignant</TableCell>
+                        <TableCell>Nom du cours</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {notesData.map((note) => (
-                        <TableRow key={note.unique_id}>
-                            <TableCell>{note.unique_id}</TableCell>
-                            <TableCell>{note.student.firstname} {note.student.lastname}</TableCell>
-                            <TableCell>{note.course}</TableCell>
-                            <TableCell>{note.date}</TableCell>
-                            <TableCell>{note.grade}</TableCell>
+                    {classes.map((classe, index) => (
+                        <TableRow key={index}>
+                            <TableCell>{classe.teacher}</TableCell>
+                            <TableCell>{classe.name}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
@@ -37,4 +35,4 @@ const Notes = () => {
     )
 }
 
-export default Notes
+export default Classe
