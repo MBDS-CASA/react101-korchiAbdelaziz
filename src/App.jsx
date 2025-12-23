@@ -1,9 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import NoteTrie from './NoteTrie'
-import Menu from './Menu'
+
+import Menu from './Components/Menu.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,8 +9,7 @@ function App() {
   return (
     <>
       <div>
-        <Menu />
-        <NoteTrie />
+        <Menu/>
       </div>
       
     </>
