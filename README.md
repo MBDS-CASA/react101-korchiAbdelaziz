@@ -6,27 +6,15 @@
 ```
 npm create vite@latest
 ```
-> Dans le questionnaire qui s'affiche, chosir :
-> 1. React
-> 2. JavaScript
-> 3. No
-> 4. Yes
-
 3. Exécuter le projet
 ```
 npm run dev
 ```
 4. Essayer de modifier le contenu du fichier App.jsx puis enregistrer le fichier, vérifier que votre changement s'affiche instantannément dans le navigateur (pas besoin de recharger la page)
-
-5. Synchroniser votre repo local avec le repo distant
-```
-git remote add origin [YOUR_REPO]
-git branch -M [main] ou [master] -- vérifier le nom de la branche par défaut de votre repo
-git push -u origin master
-```
-6. Remplacer le contenu du fichier index.ccs par celui inclut dans ce repository
-7. Créer un commit avec le message "TD00 : Initialisation du projet"
+5. Remplacer le contenu du fichier index.ccs par celui inclut dans ce repository
+6. Créer un commit avec le message "TD00 : Initialisation du projet"
 7. Push
+
 
 ## TD01 : Votre premier composant React 
 1. Créer un composant Header contenant les éléments suivant :
@@ -48,9 +36,9 @@ git push -u origin master
 4. Commit avec le message "TD02 : Afficher l'année dans le Footer"
 5. Push
 
-## TD03 : Utiliser les props 
+## TD03 : Utiliser les propos 
 1. Considérer les données du fichier data.json
-2. Créer une fonction permettant de trier alléatoirement un item de la liste
+2. Créer une fonction permettant de tirer alléatoirement un item de la liste
 3. Créer un composant permettant d'afficher un élément du tableau.
 >> Libre à vous de définir le style et la disposition des éléments (vous pouvez inclure des librairies css externes)
 4. Commit avec le message "TD03 : Afficher les détails d'une note"
@@ -74,27 +62,23 @@ git push -u origin master
 ## Etape 1: Menu dynamique
 - Modifier le composant du Menu pour utiliser une liste afin d'éviter la répétition de codes
 - Faire en sorte que l'item selectionné dans le menu soit actif
-- Créer un composent dédié permettant d'afficher le contenu lié au menu selectionné.
+- Créer un composent dédié pour chaque item du menu et afficher le bon composant en fonction du menu selectionné.
 > Pour l'instant, afficher simplement un text avec le nom du menu dans le contenu de chaque composant, on les complètera dans les étapes suivantes
 - Commit avec le messaage "TD04 : Gestion de menu dynamique"
 
 ## Etape 2: Gestion de données des composants 
-Dans cette section, vous allez gérer le contenu des composants liés au menu en utilisant des liste d'objects statiques. Pour cela, récupérer le fichier data.json et importez les dans un dossier data de votre projet. 
+Dans cette section, vous allez gérer le contenu des composants liés au menu en utilisant des liste d'objects statiques. Pour cela, récupérer les fichiers de données (notes.json, students.json, class.json et teachers.json) et importez les dans un dossier data de votre projet. 
 
 > Attention, cette étape contient plusieurs tâches, une par menu 
 
 1. Mettre à jour les dépendances du projet en y intégrant les libraries material ui [https://mui.com/material-ui/getting-started/installation/]
 2. Se familliariser avec les composants Table [https://mui.com/material-ui/react-table/] -- Commencer par le Basic Table pour l'instant
-3. Utiliser les données du fichier data.js pour remplir le contenu des composants en utilisant des tableaux
-4. Commmiter avec le message "TD05: Remplir le contenu du composant [XXX]"
+3. Utiliser les fichiers de données pour remplir le contenu des différents composants en utilisant des tableaux
+4. Commmiter avec le message "TD04: Remplir le contenu du composant [XXX]"
 5. Push
-> Répéter les étapes 1 à 5 pour les composants Notes, Etudiants et Matières.
-> Remplir le composant lié au Menu A propos avec vos coordonnées (eg. Ce projet est réalisé par XXX YYYY)
+> Répéter les étapes 1 à 5 pour tous les composants
 
-## Etape 3: Optimisez la page 
-1. Mettre à jour le CSS pour avoir un rendu plus user-friendly
-2. Optimisez l'affichage des données en incluant : la recherche, la pagination et l'ordonnancement (croissante/decroissante) des colonnes.
-3. Ajoutez une animation quand on change de menu (eg. fadein/fadeout) 
+
 
 
 
